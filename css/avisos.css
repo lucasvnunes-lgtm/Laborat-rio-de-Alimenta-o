@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.noticia {
+    position: relative;
+    background-color: rgb(59, 55, 55);
+    border: none;
+    border-radius: 20px;
+    width: 90vw;
+    height: 10vh;
+    padding-left: 20px;
+}
+
+#itensProdutos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.baseNoticia {
+    position: absolute;
+    left: 6%;
+    top: 8%;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: start;
+}
+.baseNoticia > h3{
+    font-size: 19px;
+     color:rgb(196, 191, 191);
+}
+.baseNoticia > h2{
+    font-size: 17px;
+    color:rgb(122, 252, 62);
+}
+
+.infoNoticia {
+    position: absolute;
+    left: 2%;
+    top: 24%;
+    font-size: 16px;
+    width: 80%;
+     color:white;
+}
+
+.dataNoticia {
+    position: absolute;
+    right: 1%;
+    bottom: 0%;
+    font-size: 16px;
+    color:rgb(143, 143, 143);
+}
+
+.copyright_section{
+    margin-top:20px;
+}
