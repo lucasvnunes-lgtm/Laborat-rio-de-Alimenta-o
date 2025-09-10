@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- Metadados para SEO (otimização para mecanismos de busca) -->
+      <meta name="description" content="Site de uma lanchonete escolar">
+      <title>Laboratorio de Alimentação</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      
+      <!-- Importação de frameworks -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> <!-- Bootstrap para layout responsivo -->
+      <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- Estilos personalizados -->
+      <link rel="stylesheet" href="css/responsive.css"> <!-- Estilos adicionais para responsividade -->
+      
+      <!-- Favicon (ícone da aba do navegador) -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      
+      <!-- Importação de fontes do Google -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+      
+      <!-- Bibliotecas adicionais para customização de scrollbar e compatibilidade -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      <!-- Cabeçalho e menu de navegação -->
+      <div class="header_section">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <!-- Logo clicável que redireciona para a página inicial -->
+               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               
+               <!-- Botão para menu hamburguer em dispositivos móveis -->
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               
+               <!-- Itens do menu de navegação -->
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Principal</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="coffees.html">Coffees</a> <!-- Link para página de pratos -->
+                     </li>
+                    
+                     <li class="nav-item">
+                        <a class="nav-link" href="contactCopy.html">Lanches</a> <!-- Página de teste -->
+                     </li>
+                  </ul>
+                  
+                  <!-- Área de login e pesquisa -->
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                           <li><a href="#"  onclick="chamarLoginAdm()"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>ADM</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+         
+         <!-- Seção do banner principal com carrossel -->
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <!-- Slides do carrossel (repetidos 3 vezes com mesmo conteúdo) -->
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="banner_taital_main">
+                                  <h1 class="banner_taital">Laboratorio <br>De Alimentação</h1>
+                                 <p class="banner_text">more-or-less normal distribution of letters, as opposed to using </p>
+                                 <div class="btn_main">
+                                    <div class="about_bt active"><a href="#">Sobre nós</a></div>
+                                     <div class="callnow_bt"><a href="#">Ligue agora</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ... outros slides com mesmo conteúdo ... -->
+                  </div>
+                  
+                  <!-- Controladores do carrossel (setas de navegação) -->
+                  <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
+                  <i class="fa fa-arrow-left"></i>
+                  </a>
+                  <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
+                  <i class="fa fa-arrow-right"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Seção "Sobre nós" -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="about_section_2">
+               <div class="row">
+                  <div class="col-md-6"> 
+                     <div class="about_taital_box">
+                        <h1 class="about_taital">About Our shop</h1>
+                        <h1 class="about_taital_1">Coffee distribution '</h1>
+                        <p class=" about_text">has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editorhas a more-or-less normal distribution of letters, as oppos</p>
+                        <div class="readmore_btn"><a href="#">Read More</a></div>
+                     </div>
+                  </div>
+                  <div class="col-md-6"> 
+                     <div class="image_iman"><img src="images/about-img.png" class="about_img"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Seção de produtos (com carrossel) -->
+      <div class="coffee_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="coffee_taital">OUR Coffee OFFER</h1>
+               </div>
+            </div>
+         </div>
+         <div class="coffee_section_2">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <!-- Cards de produtos (4 por slide) -->
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-1.png"></div>
+                              <div class="coffee_box">
+                                 <h3 class="types_text">TYPES OF COFFEE</h3>
+                                 <p class="looking_text">looking at its layout. The point of</p>
+                                 <div class="read_bt"><a href="#">Read More</a></div>
+                              </div>
+                           </div>
+                           <!-- ... outros 3 cards ... -->
+                        </div>
+                     </div>
+                  </div>
+                  <!-- ... outros slides com mesmo conteúdo ... -->
+               </div>
+               
+               <!-- Controladores do carrossel de produtos -->
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Seção de depoimentos de clientes (com carrossel) -->
+      <div class="client_section layout_padding">
+         <div class="container">
+            <div id="custom_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h1 class="about_taital">What syas customers</h1>
+                        </div>
+                     </div>
+                     <div class="client_section_2">
+                        <div class="client_taital_main">
+                           <div class="client_left">
+                              <div class="client_img"><img src="images/client-img1.png"></div>
+                           </div>
+                           <div class="client_right">
+                              <h3 class="moark_text">Joy Moark</h3>
+                              <p class="client_text">now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancynow use Lorem Ipsum as their default model text, </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- ... outros slides com mesmo conteúdo ... -->
+               </div>
+               
+               <!-- Controladores do carrossel de depoimentos -->
+               <a class="carousel-control-prev" href="#custom_slider" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#custom_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Seção de blog/notícias -->
+      <div class="blog_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="about_taital">Our Blog</h1>
+               </div>
+            </div>
+            <div class="blog_section_2">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="blog_box">
+                        <div class="blog_img"><img src="images/blog-img1.png"></div>
+                        <h4 class="date_text">05 April</h4>
+                        <h4 class="prep_text">PREP TECHNIQUES Coffee</h4>
+                        <p class="lorem_text">distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moredistracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more</p>
+                     </div>
+                     <div class="read_btn"><a href="#">Read More</a></div>
+                  </div>
+                  <div class="col-md-6">
+                     <!-- Segundo post do blog -->
+                     <div class="blog_box">
+                        <div class="blog_img"><img src="images/blog-img2.png"></div>
+                        <h4 class="date_text">05 April</h4>
+                        <h4 class="prep_text">Enjoy Best Coffee</h4>
+                        <p class="lorem_text">distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moredistracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more</p>
+                     </div>
+                     <div class="read_btn"><a href="#">Read More</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Seção de contato com formulário e mapa -->
+      <div class="contact_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="contact_taital">Inscreva-se</h1>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="contact_section_2">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="mail_section_1">
+                        <!-- Formulário de contato -->
+                        <input type="text" class="mail_text" placeholder="Seu Nome" name="Your Name">
+                        <input type="text" class="mail_text" placeholder="Seu Gmail" name="Your Email">
+                        <input type="text" class="mail_text" placeholder="Seu Telefone" name="Your Phone">
+                        <textarea class="massage-bt" placeholder="Mensagem" rows="5" id="comment" name="Massage"></textarea>
+                        <div class="send_bt"><a href="#">Enviar</a></div>
+                     </div>
+                  </div>
+                  <div class="map_main">
+                     <div class="map-responsive">
+                        <!-- Mapa incorporado do Google Maps -->
+                        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.543118289831!2d-37.08390682495601!3d-10.922285289235498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab2534f7be7d1%3A0x5b1cd2442a3b75c5!2sSESI%20CEFEM!5e0!3m2!1spt-BR!2sbr!4v1757443501250!5m2!1spt-BR!2sbr" width="250" height="500" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                      
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Rodapé com redes sociais e informações de contato -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="footer_social_icon">
+                     <ul>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+                  <div class="location_text">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">+01 1234567890</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">demo@gmail.com</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="form-group">
+                     <!-- Campo para inscrição em newsletter -->
+                     <textarea class="update_mail" placeholder="Your Email" rows="5" id="comment" name="Your Email"></textarea>
+                     <div class="subscribe_bt"><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Seção de direitos autorais -->
+      <div class="copyright_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <p class="copyright_text">2025 Todos os direitos reservados por <a href="https://html.design">Felipe Gustavo e Lucas Vinícius</a>
+                     Distribuição por <a href="https://themewagon.com">Jovem Tech</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Importação de scripts JavaScript -->
+      <script src="js/jquery.min.js"></script> <!-- jQuery -->
+      <script src="js/popper.min.js"></script> <!-- Popper.js para componentes Bootstrap -->
+      <script src="js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
+      <script src="js/jquery-3.0.0.min.js"></script> <!-- Outra versão do jQuery (pode causar conflitos) -->
+      <script src="js/plugin.js"></script> <!-- Plugin personalizado -->
+      
+      <!-- Scripts para customização de scrollbar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script> <!-- Scripts personalizados -->
+   </body>
+</html>
