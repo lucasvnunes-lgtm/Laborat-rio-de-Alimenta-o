@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+body {
+    overflow: auto;
+}
+
+.boxNoticia {
+    display: flex;
+
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.noticia {
+    position: relative;
+    background-color: rgb(31, 32, 32);
+    border: none;
+    border-radius: 20px;
+    width: 60vw;
+    min-height: 140px;
+    padding-left: 20px;
+}
+.noticia:hover{
+    transform: scale(1.025) !important;
+}
+
+.boxNoticia::-webkit-scrollbar {
+    width: 20px;
+    height: 7vh;
+    margin-right: 200px;
+}
+
+.boxNoticia::-webkit-scrollbar-corner {
+    background-color: black;
+}
+
+.boxNoticia::-webkit-scrollbar-track {
+    background: rgb(138, 134, 134);
+    ;
+    border-radius: 10px;
+
+}
+
+.boxNoticia::-webkit-scrollbar-thumb {
+    border: 20px solid rgb(222, 57, 57);
+    border-radius: 20px;
+
+}
+
+
+.baseNoticia {
+    position: absolute;
+    left: 6%;
+    top: 8%;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.baseNoticia>h3 {
+    font-size: 23px;
+    color: rgb(0,0,0);
+}
+
+.baseNoticia>h2 {
+    font-size: 27px;
+    color: rgb(235, 44, 44);
+}
+
+.infoNoticia {
+    position: absolute;
+    left: 2%;
+    top: 24%;
+    font-size: 19px;
+    width: 80%;
+    color: white;
+}
+
+/* Ver se é essa */
+
+.dataNoticia {
+    position: absolute;
+    right: 1%;
+    bottom: 0%;
+    font-size: 16px;
+    color: rgb(143, 143, 143);
+}
+
+.copyright_section {
+    margin-top: 20px;
+}
+
+.coffee_taital {
+    font-size: 47px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+@media (max-width: 775px) {
+    .noticia {
+        width: 80vw !important;
+        min-height: 180px !important;
+    }
+
+    .coffee_taital {
+        font-size: 47px;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+
+}
+
+@media (max-width:580px) {
+    .noticia {
+        width: 90vw !important;
+        min-height: 180px !important;
+    }
+
+    .baseNoticia {
+        position: absolute;
+        left: 6%;
+        top: 8%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .baseNoticia>h2 {
+        font-size: 24px;
+    }
+
+    .baseNoticia>h3 {
+        position: absolute;
+        top: 70%;
+        left: 4%;
+        font-size: 19px;
+    }
+
+    .infoNoticia {
+        position: absolute;
+        left: 2%;
+        top: 21%;
+        font-size: 15px;
+        width: 80%;
+        color: white;
+    }
+}
