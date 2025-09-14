@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/fivicon/carrinho.ico" type="image/x-icon">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="css/carrinhostyles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/carrinhostyles.css">
+  <script src="js/carrinho.js"></script>
+  <!--- https://youtu.be/8VjsyeMo9-A?si=xXd5wEAzCPqk6AhO -->
+</head>
+
+<body>
+  <header>
+    <span>CARRINHO DE COMPRA</span>
+  </header>
+  <main>
+    <div class="page-title">Seu Carrinho</div>
+    <div class="content">
+      <section>
+        <table id="tabela">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Total</th>
+              <th>-</th>
+            </tr>
+          </thead>
+          <!--Aqui-->
+        </table>
+      </section>
+      <aside>
+        <div class="box">
+          <header>Resumo da compra</header>
+          <div class="info">
+            <div><span>Sub-total</span><span>R$ 418</span></div>
+            <div><span>Frete</span><span>Gratuito</span></div>
+          </div>
+          <footer>
+            <span>Total</span>
+            <span>R$ 418</span>
+          </footer>
+        </div>
+        <button onclick="mandarWhatssap()">Finalizar Compra</button>
+      </aside>
+    </div>
+  </main>
+  <a class="voltar" href="produtos.html">&#8592;</a>
+</body>
+
+</html>
